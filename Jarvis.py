@@ -75,6 +75,18 @@ if __name__ == "__main__":
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
 
+        elif 'open GitHub' in query:
+            webbrowser.open("GitHub.com")
+
+        elif 'open Gmail' in query:
+            webbrowser.open("Gmail.com")
+
+        elif 'open Instagram' in query:
+            webbrowser.open("instagram.com")
+
+        elif 'open Synthesis' in query:
+            webbrowser.open("portal.synthesis.is")
+
         elif 'open google' in query:
             webbrowser.open("google.com")
 
@@ -90,18 +102,41 @@ if __name__ == "__main__":
             os.startfile(codePath)
 
         elif 'open Spotify' in query:
-            codePath = "C:\\Users\\Shreyas\\AppData\\Roaming\\Spotify\\Spotify.exe"
-            os.startfile(codePath)
+            spotifyPath = "C:\\Users\\Shreyas\\AppData\\Roaming\\Spotify\\Spotify.exe"
+            os.startfile(spotifyPath)
 
         elif 'open chrome' in query:
-            codePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-            os.startfile(codePath)
+            chromePath = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            os.startfile(chromePath)
 
-        elif 'email to vikas' in query:
+        elif 'open Firefox' in query:
+            firefoxPath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe"
+            os.startfile(firefoxPath)
+
+        elif 'open Terminal' in query:
+            terminalPath = "%windir%\\system32\\cmd.exe"
+            os.startfile(terminalPath)
+
+        elif 'open Scratch' in query:
+            scratchPath = "C:\\Program Files (x86)\\Scratch 3\\Scratch 3.exe"
+            os.startfile(scratchPath)
+        
+        elif 'email to Dad' in query:
             try:
                 speak("What should I say")
                 content = takeCommand()
                 to = "the_persons_email_you_want_to_send"
+                sendEmail(to, content)
+                speak("Email has been sent!")
+            except Exception as e:
+                print(e)
+                speak("Sorry, I was not able to send this email")
+
+        elif 'email to Mom' in query:
+            try:
+                speak("What should I say")
+                content = takeCommand()
+                to = "kavita.bodani@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
