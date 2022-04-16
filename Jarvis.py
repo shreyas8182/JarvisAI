@@ -125,7 +125,7 @@ if __name__ == "__main__":
             try:
                 speak("What should I say")
                 content = takeCommand()
-                to = "the_persons_email_you_want_to_send"
+                to = "....."
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
@@ -136,7 +136,7 @@ if __name__ == "__main__":
             try:
                 speak("What should I say")
                 content = takeCommand()
-                to = "kavita.bodani@gmail.com"
+                to = "...."
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
